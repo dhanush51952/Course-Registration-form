@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Register your interest in a small-group course at The Fieldnotes Studio.">
+  <title>Course Registration — Fieldnotes Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="registration-shell">
+    <aside class="form-aside">
+      <a class="brand" href="../index.html">FIELDNOTES<span>.</span></a>
+      <div class="aside-copy">
+        <p class="eyebrow">Learn at your own pace</p>
+        <h1>Make room<br>for what<br><em>moves you.</em></h1>
+        <p>Small-group courses for curious people who want to think more clearly, make more confidently, and keep learning.</p>
+      </div>
+      <div class="aside-bottom"><span>Thoughtful classes. Real progress.</span><span>01 — 03</span></div>
+    </aside>
+    <section class="form-panel" aria-labelledby="form-title">
+      <div class="form-heading"><p class="eyebrow">Autumn / Winter 2026</p><h2 id="form-title">Course registration</h2><p>Tell us a little about yourself and we'll save your place.</p></div>
+      <form action="#" method="post">
+        <div class="field-row">
+          <div class="field"><label for="first-name">First name <span aria-hidden="true">*</span></label><input id="first-name" name="first-name" type="text" autocomplete="given-name" placeholder="Your first name" required></div>
+          <div class="field"><label for="last-name">Last name <span aria-hidden="true">*</span></label><input id="last-name" name="last-name" type="text" autocomplete="family-name" placeholder="Your last name" required></div>
+        </div>
+        <div class="field"><label for="email">Email address <span aria-hidden="true">*</span></label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+        <div class="field"><label for="course">Choose a course <span aria-hidden="true">*</span></label><select id="course" name="course" required><option value="">Select a course</option><option value="visual-storytelling">Visual storytelling · 4 weeks</option><option value="creative-writing">Creative writing practice · 6 weeks</option><option value="web-foundations">Web design foundations · 8 weeks</option><option value="portfolio-studio">Portfolio studio · 5 weeks</option></select></div>
+        <fieldset class="field attendance"><legend>How would you like to attend?</legend><label><input type="radio" name="attendance" value="in-person" required><span>In person</span></label><label><input type="radio" name="attendance" value="online"><span>Online</span></label></fieldset>
+        <div class="field"><label for="experience">Anything you'd like us to know? <span class="optional">(optional)</span></label><textarea id="experience" name="experience" rows="3" placeholder="Your goals, questions, or experience so far"></textarea></div>
+        <label class="consent"><input type="checkbox" name="updates" value="yes"><span>Send me occasional studio notes and upcoming course announcements.</span></label>
+        <button type="submit">Request my place <span aria-hidden="true">→</span></button>
+        <p class="form-note" id="form-status" aria-live="polite">Demo only: this form does not send or store your details.</p>
+      </form>
+      <a class="back-link" href="../index.html">← All projects</a>
+    </section>
+  </main>
+  <script>
+    document.querySelector("form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      document.getElementById("form-status").textContent = "Preview only: your details were not sent or stored.";
+    });
+  </script>
+</body>
+</html>
